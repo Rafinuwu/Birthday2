@@ -1,0 +1,75 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  font-family: 'Courier New', monospace;
+}
+
+/* Video Container */
+#video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#video-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#youtube-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Image Container */
+#image-container {
+  display: none; /* Hidden by Default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, black 20%, #111);
+  animation: retroTransition 1s ease-in-out forwards;
+}
+
+#image-container img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid #ffcc00; /* Retro-style glowing border */
+  box-shadow: 0 0 20px #ffcc00;
+  margin: 20px; /* Add space around the image */
+  border-radius: 8px; /* Smooth rounded edges */
+}
+
+/* Retro Gaming Transition Effect */
+@keyframes retroTransition {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
